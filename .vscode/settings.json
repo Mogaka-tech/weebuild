@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "website-builder/bin/python",
+    "python.pythonPath": "/home/gitpod/.pyenv/shims/python",
     "git.ignoreLimitWarning": true
 }
