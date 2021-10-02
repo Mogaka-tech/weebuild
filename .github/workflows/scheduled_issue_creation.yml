@@ -1,0 +1,79 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Weekly Team Sync
+on:
+  schedule:
+    - cron: 00 10 * * 1
+
+jobs:
+  create_issue:
+    name: Create team sync issue
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Create team sync issue
+        uses: imjohnbo/issue-bot@3daae12aa54d38685d7ff8459fc8a2aee8cea98b
+        with:
+          assignees: "Mogakamo, heizal"
+          labels: "meetings"
+          title: "Team sync"
+          body: |
+            ### Agenda
+
+            - [ ] Start the recording
+            - [ ] Check-ins
+            - [ ] Discussion points
+            - [ ] Post the recording
+                    
+            ### Discussion Points
+            Add things to discuss below
+            
+            - [ ] Progress of the project
+            - [ ] Discussing the roadmap
+            - [ ] setting goals
+
+            - [Meeting link](https://zoom.us/j/94948262599?pwd=aks3dlg1RDNIZ2hQbWMxaTJTbUswZz09)
+            Meeting details: 
+                Amos Mogaka is inviting you to a scheduled Zoom meeting.
+
+                Topic: WeeBuild Progress discussion
+                Time: Oct 4, 2021 01:00 PM Nairobi
+                Every day, 20 occurrence(s)
+                Oct 4, 2021 01:00 PM
+                Oct 5, 2021 01:00 PM
+                Oct 6, 2021 01:00 PM
+                Oct 7, 2021 01:00 PM
+                Oct 8, 2021 01:00 PM
+                Oct 9, 2021 01:00 PM
+                Oct 10, 2021 01:00 PM
+                Oct 11, 2021 01:00 PM
+                Oct 12, 2021 01:00 PM
+                Oct 13, 2021 01:00 PM
+                Oct 14, 2021 01:00 PM
+                Oct 15, 2021 01:00 PM
+                Oct 16, 2021 01:00 PM
+                Oct 17, 2021 01:00 PM
+                Oct 18, 2021 01:00 PM
+                Oct 19, 2021 01:00 PM
+                Oct 20, 2021 01:00 PM
+                Oct 21, 2021 01:00 PM
+                Oct 22, 2021 01:00 PM
+                Oct 23, 2021 01:00 PM
+                Please download and import the following iCalendar (.ics) files to your calendar system.
+                Daily: https://zoom.us/meeting/tJAkc-GqqDkvE92qA3cNFy6rxrBkvusaIr6Z/ics?icsToken=98tyKuCspz8iGNKXtRCORowIHY-gWerwpnpYj_oPjT62AA51e1XkLvBgOaRqA9n5
+
+                Join Zoom Meeting
+                https://zoom.us/j/94948262599?pwd=aks3dlg1RDNIZ2hQbWMxaTJTbUswZz09
+
+                Meeting ID: 949 4826 2599
+                Passcode: vUEq4J
+
+
+          pinned: true
+          close-previous: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
