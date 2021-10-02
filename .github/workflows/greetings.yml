@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Thank you for raising an issue on the WeeBuild project. For a faster review please tag @Mogakamo at the comments of your issue for further clarification.'
+        pr-message: 'Thank you for making your pull request. For a faster review of your code please make a request for a review on you pull request. Happy coding :rocket:!!!'
