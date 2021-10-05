@@ -1,9 +1,9 @@
 # frontend
 
 ## Project setup
-1. First install the packages using ```yarn install``` 
-2. 
-
+```
+yarn install
+```
 
 ### Compiles and hot-reloads for development
 ```
