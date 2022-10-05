@@ -55,11 +55,11 @@ For changes that address core functionality or would require breaking changes (e
 In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susam/gitpr)
 
 1. Fork the repository to your own Github account
-2. Clone the project to your machine using the git clone command: ``` git clone https://github.com/$USERNAME/website-builder ```
+2. Clone the project to your machine using the git clone command: ``` git clone https://github.com/$USERNAME/wee-build ```
   ***Note:*** Substitute the ``` $USERNAME ``` with your username.
   
-3. Create a branch locally with a succinct but descriptive name ``` git branch develop ```
-4. Checkout to the branch you just created using ``` git checkout develop ``` and then you can start working.  
+3. Create a branch locally with a succinct but descriptive name ``` git branch <issue-you-are-working-on> ```
+4. Checkout to the branch you just created using ``` git checkout <issue-you-are-working-on> ``` and then you can start working.  
 5. Commit changes to the branch
 6. Push changes to your fork
 7. Open a PR in our repository and follow the PR template so that we can efficiently review the changes.
